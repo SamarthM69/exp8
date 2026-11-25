@@ -14,12 +14,12 @@ pipeline {
             }
         }
 
-        stage('2. Application Build & Test') {
-            steps {
-                echo "Verifying Python syntax..."
-                bat 'python -m py_compile app.py'
-            }
-        }
+     stage('2. Application Build & Test') {
+    steps {
+        echo "Verifying Python syntax..."
+        bat '"C:\\Users\\STUDENT\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m py_compile app.py'
+    }
+}
 
         stage('3. Build & Tag Docker Image') {
             steps {
